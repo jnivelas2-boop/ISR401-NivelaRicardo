@@ -20,13 +20,13 @@
 \begin{document}
 	
 	\maketitle
-	
-	\section{Clasificación de Enunciados}
+
+\section{Clasificación de Enunciados}
 	
 	En la Tabla \ref{tab:clasificacion} se presenta la clasificación de los 20 enunciados del caso de estudio según el estándar ISO/IEC/IEEE 29148:2018 \cite{ieee29148}.
 	
 	\small
-	\begin{longtable}{@{}p{0.6cm}p{3.2cm}p{2.2cm}p{1.5cm}p{1.3cm}p{5.8cm}@{}}
+	\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.8cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{5.8cm}@{}}
 		\caption{Clasificación de los 20 enunciados del sistema.} \label{tab:clasificacion} \\
 		\toprule
 		\textbf{Cód.} & \textbf{Enunciado} & \textbf{Tipo (ISO/IEC 25010)} & \textbf{Ámbito} & \textbf{Nivel} & \textbf{Justificación en una línea} \\
@@ -113,30 +113,42 @@
 	\end{longtable}
 	\normalsize
 	
-	\section{Discusión y Discrepancias}
+\section{Discusión y Discrepancias}
+
+En la Tabla \ref{tab:discrepancias} se registran las siete diferencias identificadas al comparar mi clasificación inicial con la de Jostin Vélez. Las resoluciones se presentan como propuestas para su revisión entre pares; no constituyen acuerdos ya confirmados. La Tabla \ref{tab:clasificacion} conserva mis respuestas originales para mostrar el punto de partida de la comparación.
+
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.8cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{6.3cm}@{}}
+	\caption{Discrepancias entre Ricardo y Jostin y resoluciones propuestas.} \label{tab:discrepancias} \\
+	\toprule
+	\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
+	\midrule
+	\endfirsthead
+	\toprule
+	\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
+	\midrule
+	\endhead
+	\bottomrule
+	\endfoot
 	
-	En la Tabla \ref{tab:discrepancias} se registran las discrepancias analizadas durante la comparación con un compañero de clase y su resolución fundamentada en la norma \cite{ieee29148}.
+	E02 & Nivel: Software & Nivel: Sistema & Se propone Sistema si el alcance incluye la integración de la plataforma con un servicio externo de SMS. El envío requiere coordinar la aplicación y dicho servicio. Software también es defendible si se especifica únicamente la función de solicitar el envío desde la aplicación. \\ \addlinespace
 	
-	\small
-	\begin{longtable}{@{}p{1.0cm}p{4.5cm}p{4.5cm}p{5.5cm}@{}}
-		\caption{Registro de discrepancias y resolución entre pares.} \label{tab:discrepancias} \\
-		\toprule
-		\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
-		\midrule
-		\endfirsthead
-		\toprule
-		\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
-		\midrule
-		\endhead
-		\bottomrule
-		\endfoot
-		
-		E05 & Restricción / Producto / Software & [Postura del compañero, ej. Proceso] & [Escribe aquí el acuerdo al que llegaron] \\ \addlinespace
-		
-		E12 & Funcional / Producto / Software & [Postura del compañero, ej. Calidad (Seguridad)] & [Escribe aquí el acuerdo al que llegaron] \\ \addlinespace
-		
-	\end{longtable}
-	\normalsize
+	E03 & Calidad (Eficiencia de desempeño) & Calidad (Eficiencia de desempeño - Comportamiento temporal) & Se propone precisar la clasificación como comportamiento temporal, porque la rapidez se evalúa mediante el tiempo de respuesta. La clasificación inicial identifica la característica general y la del compañero aporta una subcaracterística; ambas son compatibles. \\ \addlinespace
+	
+	E07 & Calidad (Seguridad) & Calidad (Seguridad - Confidencialidad) & Se propone confidencialidad como foco de la protección frente al acceso o divulgación no autorizados de datos médicos. Seguridad sigue siendo la característica general válida: el enunciado no permite descartar otras necesidades, como integridad o disponibilidad. \\ \addlinespace
+	
+	E10 & Calidad (Usabilidad / Capacidad de interacción) & Calidad (Capacidad de interacción - Inclusividad) & Se propone capacidad de interacción, específicamente inclusividad, por la atención a las necesidades de los adultos mayores. Se precisa así la característica general inicial con la terminología del modelo de calidad utilizado. \\ \addlinespace
+	
+	E11 & Nivel: Software & Nivel: N/A & Se propone N/A (no aplica), porque el plazo máximo de seis meses restringe la planificación y entrega del proyecto. Se mantiene como restricción de proceso; no describe una propiedad del producto a nivel de sistema o software. \\ \addlinespace
+	
+	E16 & Nivel: Sistema & Nivel: N/A & Se propone N/A, ya que validar cada incremento con el director médico al finalizar una iteración de dos semanas establece una actividad del proceso de desarrollo. No define una función ni una propiedad del sistema entregado. \\ \addlinespace
+	
+	E20 & Nivel: Software & Nivel: N/A & Se propone N/A, porque la revisión del código por otro integrante antes de integrarlo a la rama principal es una regla de trabajo del equipo. Aunque se aplica al código fuente, corresponde al proceso de desarrollo y no a una capacidad del software. \\ \addlinespace
+	
+\end{longtable}
+\normalsize
+
+Las diferencias de E03, E07 y E10 corresponden principalmente al grado de detalle de la clasificación. En E02, la decisión depende del límite definido para el sistema. En E11, E16 y E20, N/A expresa que el nivel de producto no resulta aplicable a las restricciones del proceso.
 	
 	\section*{Declaración de Uso de Inteligencia Artificial}
 	De acuerdo con los lineamientos de integridad académica de la asignatura, se declara el uso de la herramienta de inteligencia artificial \textbf{Google Gemini} como asistente de apoyo durante la elaboración de este taller específicamente en las siguientes tareas:
@@ -146,7 +158,7 @@
 		\item \textbf{Explicación de conceptos técnicos de seguridad:} Aclaración conceptual sobre estándares de cifrado de datos en reposo (\textbf{AES-256}) y seguridad de datos en tránsito (\textbf{TLS 1.3}) para fundamentar las métricas y umbrales de cuantificación del requisito E07.
 		\item \textbf{Revisión ortográfica:} Corrección de tildes y formato tipográfico sin alterar el análisis ni la clasificación realizada por el autor.
 	\end{itemize}
-	El análisis de los enunciados, la toma de decisiones de clasificación y la redacción de las propuestas fueron realizados y verificados por el estudiante autor del trabajo.
+	Adicionalmente, se utilizó \textbf{ChatGPT (Codex)} para revisar el documento e incorporar y ajustar las justificaciones propuestas de la tabla de discrepancias a partir del material proporcionado. La revisión final de estas propuestas y su confirmación entre compañeros quedan a cargo del estudiante.
 	
 	\bibliographystyle{IEEEtran}
 	\bibliography{referencias}
