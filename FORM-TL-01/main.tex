@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{cite}
+
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+\title{\textbf{FORM-TL-01: Clasificación y Cuantificación de Requisitos}\\
+	\large Caso: Plataforma de gestión de citas médicas (Policlínico Ribera del Quevedo)}
+\author{José Ricardo Nivela Saavedra \\ \small Ingeniería de Requerimientos (ISR-401) $\cdot$ 4.º nivel ``A'' $\cdot$ UTEQ}
+\date{Octubre de 2026}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Clasificación de Enunciados}
+	
+	En la Tabla \ref{tab:clasificacion} se presenta la clasificación de los 20 enunciados del caso de estudio según el estándar ISO/IEC/IEEE 29148:2018 \cite{ieee29148}, el modelo de calidad ISO/IEC 25010:2023 \cite{iso25010} y los fundamentos de ingeniería de software \cite{sommerville2016}.
+	
+	\small
+	% Se ajustaron 6 columnas aquí para que coincidan exactamente con tus 6 encabezados
+	\begin{longtable}{@{}p{0.6cm}p{3.2cm}p{2.2cm}p{1.5cm}p{1.3cm}p{5.8cm}@{}}
+		\caption{Clasificación de los 20 enunciados del sistema.} \label{tab:clasificacion} \\
+		\toprule
+		\textbf{Cód.} & \textbf{Enunciado} & \textbf{Tipo (ISO/IEC 25010)} & \textbf{Ámbito} & \textbf{Nivel} & \textbf{Justificación en una línea} \\
+		\midrule
+		\endfirsthead
+		\toprule
+		\textbf{Cód.} & \textbf{Enunciado} & \textbf{Tipo (ISO/IEC 25010)} & \textbf{Ámbito} & \textbf{Nivel} & \textbf{Justificación en una línea} \\
+		\midrule
+		\endhead
+		\bottomrule
+		\endfoot
+		
+		% --- AQUÍ LLENAS TUS RESPUESTAS SEPARANDO CADA COLUMNA CON EL SÍMBOLO & ---
+		
+		E01 & El paciente podrá reservar una cita eligiendo especialidad, médico, fecha y hora entre los horarios disponibles  & Funcional & Producto & Software & Permite al usuario reservar una cita. \\ \addlinespace
+		
+		E02 & La plataforma enviará al paciente un recordatorio por mensaje de texto 24 horas antes de su cita & Funcional & Producto & Software & Permite al usuario recibir un recordatorio. \\ \addlinespace
+		
+		E03 & La aplicación debe ser rápida. & Calidad(Eficiencia de desempeño) & Producto & Software & Indica que la aplicacion debe ser eficiente. \\ \addlinespace
+		
+		E04 & El recepcionista podrá registrar la llegada del paciente que se acerca a la ventanilla. & Funcional  & Producto & Software & Permite el registro del paciente en ventanilla. \\ \addlinespace
+		
+		E05 & La plataforma se desarrollará en Java 21 con base de datos PostgreSQL, tecnologías que domina el área de TI. & Restricción & Producto & Software & Indica las tecnologias que deben ser usadas. \\ \addlinespace
+		
+		E06 & El médico podrá consultar la lista de pacientes del día y marcar cada consulta como atendida & Funcional  & Producto & Software & Permite al medico clasificar las consultas y ver las que faltan. \\ \addlinespace
+		
+		E07 & Los datos de salud de los pacientes deben estar seguros. & Calidad(Seguridad) & Producto  & Software & Indica que la aplicacion debe tener medidas de seguridad. \\ \addlinespace
+		
+		E08 & La aplicación móvil debe funcionar en Android 10 o superior. & Restriccion & Producto & Software & Indica el sistema operativo que deben tener los celulares. \\ \addlinespace
+		
+		E09 & Una cita cancelada con menos de cuatro horas de anticipación se registrará como inasistencia & Funcional &  & & . \\ \addlinespace
+		
+		E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores & Calidad() &  & & . \\ \addlinespace
+		
+		E11 & El proyecto debe entregarse en un plazo máximo de seis meses. &  &  & & . \\ \addlinespace
+		
+		E12 & La sesión de un usuario se cerrará automáticamente tras 10 minutos sin actividad.&  &  & & . \\ \addlinespace
+		
+		E13 & El quiosco de la sala de espera leerá el número de cédula ingresado en su pantalla táctil e imprimirá un ticket con el número de turno. &  &  & & . \\ \addlinespace
+		
+		E14 & La plataforma debe estar siempre disponible &  &  & & . \\ \addlinespace
+		
+		E15 & El director médico podrá generar un reporte mensual de inasistencias por especialidad&  &  & & . \\ \addlinespace
+		
+		E16 & Cada incremento se validará con el director médico al final de cada iteración de dos semanas. &  &  & & . \\ \addlinespace
+		
+		E17 & El tratamiento de los datos personales de los pacientes debe cumplir la Ley Orgánica de Protección de Datos Personales del Ecuador. &  &  & & . \\ \addlinespace
+		
+		E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. &  &  & & . \\ \addlinespace
+		
+		E19 & Si el servidor principal falla, la plataforma debe restablecer el servicio en menos de 30 minutos sin perder ninguna cita confirmada. &  &  & & . \\ \addlinespace
+		
+		E20 & Todo cambio en el código fuente será revisado por otro integrante del equipo antes de integrarse a la rama principal. &  &  & & . \\ \addlinespace
+		
+	\end{longtable}
+	\normalsize
+	
+	\section{Cuantificación de los 5 Requisitos de Calidad Vagos}
+	
+	\begin{enumerate}
+		\item \textbf{E03:} [Escribe aquí tu versión mejorada con números y métricas]
+		\item \textbf{E07:} [Escribe aquí tu versión mejorada]
+		\item \textbf{E10:} [Escribe aquí tu versión mejorada]
+		\item \textbf{E14:} [Escribe aquí tu versión mejorada]
+		\item \textbf{E18:} [Escribe aquí tu versión mejorada]
+	\end{enumerate}
+	
+	\section{Discusión y Discrepancias}
+	
+	[Aquí anotaremos las diferencias cuando compares con un compañero]
+	
+	\bibliographystyle{IEEEtran}
+	\bibliography{referencias}
+	
+\end{document}
