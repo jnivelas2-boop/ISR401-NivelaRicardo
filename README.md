@@ -1,4 +1,3 @@
-@ -0,0 +1,74 @@
 # ISR401-NivelaRicardo
 
 Repositorio personal de **Ingeniería de Requerimientos (ISR-401)**, 4.º nivel, paralelo B, SPA 2026–2027.
