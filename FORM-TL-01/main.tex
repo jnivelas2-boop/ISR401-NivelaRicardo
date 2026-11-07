@@ -10,11 +10,12 @@
 
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\refname}{Referencias}
 
 \title{\textbf{FORM-TL-01: Clasificación y Cuantificación de Requisitos}\\
 	\large Caso: Plataforma de gestión de citas médicas (Policlínico Ribera del Quevedo)}
 \author{José Ricardo Nivela Saavedra \\ \small Ingeniería de Requerimientos (ISR-401) $\cdot$ 4.º nivel ``A'' $\cdot$ UTEQ}
-\date{Octubre de 2026}
+\date{Noviembre de 2026}
 
 \begin{document}
 	
@@ -22,10 +23,9 @@
 	
 	\section{Clasificación de Enunciados}
 	
-	En la Tabla \ref{tab:clasificacion} se presenta la clasificación de los 20 enunciados del caso de estudio según el estándar ISO/IEC/IEEE 29148:2018 \cite{ieee29148}, el modelo de calidad ISO/IEC 25010:2023 \cite{iso25010} y los fundamentos de ingeniería de software \cite{sommerville2016}.
+	En la Tabla \ref{tab:clasificacion} se presenta la clasificación de los 20 enunciados del caso de estudio según el estándar ISO/IEC/IEEE 29148:2018 \cite{ieee29148}.
 	
 	\small
-	% Se ajustaron 6 columnas aquí para que coincidan exactamente con tus 6 encabezados
 	\begin{longtable}{@{}p{0.6cm}p{3.2cm}p{2.2cm}p{1.5cm}p{1.3cm}p{5.8cm}@{}}
 		\caption{Clasificación de los 20 enunciados del sistema.} \label{tab:clasificacion} \\
 		\toprule
@@ -39,64 +39,114 @@
 		\bottomrule
 		\endfoot
 		
-		% --- AQUÍ LLENAS TUS RESPUESTAS SEPARANDO CADA COLUMNA CON EL SÍMBOLO & ---
+		E01 & El paciente podrá reservar una cita eligiendo especialidad, médico, fecha y hora entre los horarios disponibles. & Funcional & Producto & Software & Permite al usuario reservar una cita. \\ \addlinespace
 		
-		E01 & El paciente podrá reservar una cita eligiendo especialidad, médico, fecha y hora entre los horarios disponibles  & Funcional & Producto & Software & Permite al usuario reservar una cita. \\ \addlinespace
+		E02 & La plataforma enviará al paciente un recordatorio por mensaje de texto 24 horas antes de su cita. & Funcional & Producto & Software & Permite al usuario recibir un recordatorio. \\ \addlinespace
 		
-		E02 & La plataforma enviará al paciente un recordatorio por mensaje de texto 24 horas antes de su cita & Funcional & Producto & Software & Permite al usuario recibir un recordatorio. \\ \addlinespace
+		E03 & La aplicación debe ser rápida. & Calidad (Eficiencia de desempeño) & Producto & Software & Exige que la aplicación debe ser eficiente. \\ \addlinespace
 		
-		E03 & La aplicación debe ser rápida. & Calidad(Eficiencia de desempeño) & Producto & Software & Indica que la aplicacion debe ser eficiente. \\ \addlinespace
+		E04 & El recepcionista podrá registrar la llegada del paciente que se acerca a la ventanilla. & Funcional & Producto & Software & Permite el registro del paciente en ventanilla. \\ \addlinespace
 		
-		E04 & El recepcionista podrá registrar la llegada del paciente que se acerca a la ventanilla. & Funcional  & Producto & Software & Permite el registro del paciente en ventanilla. \\ \addlinespace
+		E05 & La plataforma se desarrollará en Java 21 con base de datos PostgreSQL, tecnologías que domina el área de TI. & Restricción & Producto & Software & Restringe las tecnologías que deben ser usadas. \\ \addlinespace
 		
-		E05 & La plataforma se desarrollará en Java 21 con base de datos PostgreSQL, tecnologías que domina el área de TI. & Restricción & Producto & Software & Indica las tecnologias que deben ser usadas. \\ \addlinespace
+		E06 & El médico podrá consultar la lista de pacientes del día y marcar cada consulta como atendida. & Funcional & Producto & Software & Permite al médico clasificar las consultas y ver las que faltan. \\ \addlinespace
 		
-		E06 & El médico podrá consultar la lista de pacientes del día y marcar cada consulta como atendida & Funcional  & Producto & Software & Permite al medico clasificar las consultas y ver las que faltan. \\ \addlinespace
+		E07 & Los datos de salud de los pacientes deben estar seguros. & Calidad (Seguridad) & Producto & Software & Exige que la aplicación debe tener medidas de seguridad. \\ \addlinespace
 		
-		E07 & Los datos de salud de los pacientes deben estar seguros. & Calidad(Seguridad) & Producto  & Software & Indica que la aplicacion debe tener medidas de seguridad. \\ \addlinespace
+		E08 & La aplicación móvil debe funcionar en Android 10 o superior. & Restricción & Producto & Software & Restringe el sistema operativo que deben tener los celulares. \\ \addlinespace
 		
-		E08 & La aplicación móvil debe funcionar en Android 10 o superior. & Restriccion & Producto & Software & Indica el sistema operativo que deben tener los celulares. \\ \addlinespace
+		E09 & Una cita cancelada con menos de cuatro horas de anticipación se registrará como inasistencia. & Funcional & Producto & Software & Indica una función que debe cumplir el sistema. \\ \addlinespace
 		
-		E09 & Una cita cancelada con menos de cuatro horas de anticipación se registrará como inasistencia & Funcional &  & & . \\ \addlinespace
+		E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores. & Calidad (Usabilidad / Capacidad de interacción) & Producto & Software & Exige la facilidad de uso del sistema. \\ \addlinespace
 		
-		E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores & Calidad() &  & & . \\ \addlinespace
+		E11 & El proyecto debe entregarse en un plazo máximo de seis meses. & Restricción & Proceso & Software & Restringe el tiempo límite. \\ \addlinespace
 		
-		E11 & El proyecto debe entregarse en un plazo máximo de seis meses. &  &  & & . \\ \addlinespace
+		E12 & La sesión de un usuario se cerrará automáticamente tras 10 minutos sin actividad. & Funcional & Producto & Software & Indica el límite máximo de tiempo de inactividad antes de cerrar sesión. \\ \addlinespace
 		
-		E12 & La sesión de un usuario se cerrará automáticamente tras 10 minutos sin actividad.&  &  & & . \\ \addlinespace
+		E13 & El quiosco de la sala de espera leerá el número de cédula ingresado en su pantalla táctil e imprimirá un ticket con el número de turno. & Funcional & Producto & Sistema & Define una función que integra software y hardware físico del quiosco. \\ \addlinespace
 		
-		E13 & El quiosco de la sala de espera leerá el número de cédula ingresado en su pantalla táctil e imprimirá un ticket con el número de turno. &  &  & & . \\ \addlinespace
+		E14 & La plataforma debe estar siempre disponible. & Calidad (Fiabilidad - Disponibilidad) & Producto & Sistema & Exige disponibilidad continua del sistema. \\ \addlinespace
 		
-		E14 & La plataforma debe estar siempre disponible &  &  & & . \\ \addlinespace
+		E15 & El director médico podrá generar un reporte mensual de inasistencias por especialidad. & Funcional & Producto & Software & Permite generar un reporte mensual con información agrupada. \\ \addlinespace
 		
-		E15 & El director médico podrá generar un reporte mensual de inasistencias por especialidad&  &  & & . \\ \addlinespace
+		E16 & Cada incremento se validará con el director médico al final de cada iteración de dos semanas. & Restricción & Proceso & Sistema & Impone una regla sobre el proceso de validación cada dos semanas. \\ \addlinespace
 		
-		E16 & Cada incremento se validará con el director médico al final de cada iteración de dos semanas. &  &  & & . \\ \addlinespace
+		E17 & El tratamiento de los datos personales de los pacientes debe cumplir la Ley Orgánica de Protección de Datos Personales del Ecuador. & Restricción & Producto & Sistema & Obliga al cumplimiento de una ley nacional sobre el tratamiento de datos. \\ \addlinespace
 		
-		E17 & El tratamiento de los datos personales de los pacientes debe cumplir la Ley Orgánica de Protección de Datos Personales del Ecuador. &  &  & & . \\ \addlinespace
+		E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. & Calidad (Compatibilidad - Interoperabilidad) & Producto & Software & Exige la conexión con una interfaz externa de facturación. \\ \addlinespace
 		
-		E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. &  &  & & . \\ \addlinespace
+		E19 & Si el servidor principal falla, la plataforma debe restablecer el servicio en menos de 30 minutos sin perder ninguna cita confirmada. & Calidad (Fiabilidad - Recuperabilidad) & Producto & Sistema & Establece el tiempo máximo de recuperación ante un fallo del servidor. \\ \addlinespace
 		
-		E19 & Si el servidor principal falla, la plataforma debe restablecer el servicio en menos de 30 minutos sin perder ninguna cita confirmada. &  &  & & . \\ \addlinespace
-		
-		E20 & Todo cambio en el código fuente será revisado por otro integrante del equipo antes de integrarse a la rama principal. &  &  & & . \\ \addlinespace
+		E20 & Todo cambio en el código fuente será revisado por otro integrante del equipo antes de integrarse a la rama principal. & Restricción & Proceso & Software & Impone una regla obligatoria de revisión de código en el proceso de desarrollo. \\ \addlinespace
 		
 	\end{longtable}
 	\normalsize
 	
 	\section{Cuantificación de los 5 Requisitos de Calidad Vagos}
 	
-	\begin{enumerate}
-		\item \textbf{E03:} [Escribe aquí tu versión mejorada con números y métricas]
-		\item \textbf{E07:} [Escribe aquí tu versión mejorada]
-		\item \textbf{E10:} [Escribe aquí tu versión mejorada]
-		\item \textbf{E14:} [Escribe aquí tu versión mejorada]
-		\item \textbf{E18:} [Escribe aquí tu versión mejorada]
-	\end{enumerate}
+	En la Tabla \ref{tab:cuantificacion} se presentan los cinco requisitos de calidad originalmente ambiguos junto a su reescritura cuantificada y verificable conforme a ISO/IEC/IEEE 29148:2018 \cite{ieee29148}.
+	
+	\small
+	\begin{longtable}{@{}p{1.0cm}p{5.5cm}p{9.0cm}@{}}
+		\caption{Reescritura cuantificada de los 5 requisitos de calidad vagos.} \label{tab:cuantificacion} \\
+		\toprule
+		\textbf{Cód.} & \textbf{Requisito Vago Original} & \textbf{Requisito Cuantificado (Métrica, Unidad y Umbral)} \\
+		\midrule
+		\endfirsthead
+		\toprule
+		\textbf{Cód.} & \textbf{Requisito Vago Original} & \textbf{Requisito Cuantificado (Métrica, Unidad y Umbral)} \\
+		\midrule
+		\endhead
+		\bottomrule
+		\endfoot
+		
+		E03 & La aplicación debe ser rápida. & La aplicación deberá responder en un tiempo menor o igual a 2 segundos el 99\% de las veces que tenga una carga extenuante de 300 usuarios simultáneos. \\ \addlinespace
+		
+		E07 & Los datos de salud de los pacientes deben estar seguros. & La plataforma bloqueará el inicio de sesión durante 10 minutos después de 3 intentos fallidos de inicio de sesión y encriptará el 100\% de los datos médicos sensibles en reposo mediante AES-256 (256 bits) y en tránsito mediante TLS 1.3. \\ \addlinespace
+		
+		E10 & La plataforma debe ser fácil de usar para los pacientes adultos mayores. & La plataforma deberá permitir que el 90\% de los usuarios que pertenezcan al grupo de adultos mayores pueda completar la fase de registro en 4 minutos. \\ \addlinespace
+		
+		E14 & La plataforma debe estar siempre disponible. & La plataforma deberá ser funcional el 99\% del mes durante el horario de atención de la clínica. \\ \addlinespace
+		
+		E18 & La plataforma debe integrarse sin problemas con el sistema de facturación actual. & Al menos el 99\% de los comprobantes generados deberán sincronizarse con el sistema de facturación en tiempo menor o igual a 5 segundos por transacción. \\ \addlinespace
+		
+	\end{longtable}
+	\normalsize
 	
 	\section{Discusión y Discrepancias}
 	
-	[Aquí anotaremos las diferencias cuando compares con un compañero]
+	En la Tabla \ref{tab:discrepancias} se registran las discrepancias analizadas durante la comparación con un compañero de clase y su resolución fundamentada en la norma \cite{ieee29148}.
+	
+	\small
+	\begin{longtable}{@{}p{1.0cm}p{4.5cm}p{4.5cm}p{5.5cm}@{}}
+		\caption{Registro de discrepancias y resolución entre pares.} \label{tab:discrepancias} \\
+		\toprule
+		\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
+		\midrule
+		\endfirsthead
+		\toprule
+		\textbf{Cód.} & \textbf{Clasificación Propia} & \textbf{Clasificación del Compañero} & \textbf{Resolución y Justificación} \\
+		\midrule
+		\endhead
+		\bottomrule
+		\endfoot
+		
+		E05 & Restricción / Producto / Software & [Postura del compañero, ej. Proceso] & [Escribe aquí el acuerdo al que llegaron] \\ \addlinespace
+		
+		E12 & Funcional / Producto / Software & [Postura del compañero, ej. Calidad (Seguridad)] & [Escribe aquí el acuerdo al que llegaron] \\ \addlinespace
+		
+	\end{longtable}
+	\normalsize
+	
+	\section*{Declaración de Uso de Inteligencia Artificial}
+	De acuerdo con los lineamientos de integridad académica de la asignatura, se declara el uso de la herramienta de inteligencia artificial \textbf{Google Gemini} como asistente de apoyo durante la elaboración de este taller específicamente en las siguientes tareas:
+	\begin{itemize}
+		\item \textbf{Configuración de entorno y plantilla \LaTeX:} Asistencia en la estructuración del código fuente (\texttt{main.tex}), ajuste de tablas (\texttt{longtable}), gestión bibliográfica con \texttt{BibTeX} y solución de errores de compilación en TeXstudio.
+		\item \textbf{Consulta y traducción de estándares:} Traducción al español de fragmentos técnicos de la norma ISO/IEC/IEEE 29148:2018 y aclaración de las características de calidad de ISO/IEC 25010:2023.
+		\item \textbf{Explicación de conceptos técnicos de seguridad:} Aclaración conceptual sobre estándares de cifrado de datos en reposo (\textbf{AES-256}) y seguridad de datos en tránsito (\textbf{TLS 1.3}) para fundamentar las métricas y umbrales de cuantificación del requisito E07.
+		\item \textbf{Revisión ortográfica:} Corrección de tildes y formato tipográfico sin alterar el análisis ni la clasificación realizada por el autor.
+	\end{itemize}
+	El análisis de los enunciados, la toma de decisiones de clasificación y la redacción de las propuestas fueron realizados y verificados por el estudiante autor del trabajo.
 	
 	\bibliographystyle{IEEEtran}
 	\bibliography{referencias}
