@@ -1,0 +1,188 @@
+% TA-IND-01 — plantilla del informe. Reemplazar los campos entre corchetes.
+% La versión final debe tener 4 a 7 páginas de contenido.
+% Antes de entregar: verificar las referencias, las figuras y la compilación
+% siguiendo el README.md. El comprobante de una página para el SGA es aparte.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2cm]{geometry}
+\usepackage{array,booktabs,longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{placeholder}{HTML}{475569}
+\newcommand{\campo}[1]{\textcolor{placeholder}{[#1]}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\arraystretch}{1.35}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+
+\title{\textbf{TA-IND-01: IEEE 29148 y tipos de requisitos de un sistema conocido}\\
+  \large Caso: \campo{Nombre del sistema}}
+\author{José Ricardo Nivela Saavedra\\
+  \small Ingeniería de Requerimientos (ISR-401) $\cdot$ 4.\textsuperscript{o} nivel $\cdot$ UTEQ}
+\date{Noviembre de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Sistema elegido}
+
+\campo{Describir en un párrafo el propósito del sistema, sus usuarios y su contexto de uso.}
+
+\section{Resumen analítico}
+
+\campo{Redactar entre 1,5 y 2 páginas con palabras propias. Consultar las cláusulas 1, 3 y 5.2 de ISO/IEC/IEEE 29148:2018 y citar la cláusula exacta de cada idea.}
+
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \setlength{\parskip}{0pt}
+  \item \textbf{Requisito bien formado (5.2.4).} \campo{Explicar su construcción.}
+  \item \textbf{Requisito individual (5.2.5).} \campo{Explicar las nueve características.}
+  \item \textbf{Conjunto de requisitos (5.2.6).} \campo{Explicar sus características.}
+  \item \textbf{Criterios de lenguaje (5.2.7).} \campo{Identificar términos ambiguos y explicar su efecto en la verificación.}
+  \item \textbf{Tipos y atributos.} \campo{Distinguir los tipos usados y explicar la diferencia entre un requisito y sus atributos (5.2.8).}
+\end{itemize}
+
+\clearpage
+\section{Glosario}
+
+La Tabla~\ref{tab:glosario} reúne los términos seleccionados de la cláusula 3 y sus ejemplos en el sistema estudiado.
+
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{@{}L{0.65cm}L{3.4cm}L{5.8cm}L{5.55cm}@{}}
+\caption{Términos de ISO/IEC/IEEE 29148:2018 aplicados al sistema.}\label{tab:glosario}\\
+\toprule
+\textbf{N.º} & \textbf{Término} & \textbf{Definición parafraseada} & \textbf{Ejemplo propio} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{N.º} & \textbf{Término} & \textbf{Definición parafraseada} & \textbf{Ejemplo propio} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+01 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+02 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+03 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+04 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+05 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+06 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+07 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+08 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+09 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+10 & \campo{Término} & \campo{Definición} & \campo{Ejemplo} \\
+\end{longtable}
+}
+
+\section{Requisitos y clasificación}
+
+La Tabla~\ref{tab:requisitos} organiza los requisitos del sistema por tipo. Para los requisitos de calidad se registra la característica y subcaracterística de ISO/IEC 25010:2023.
+
+\campo{Cubrir al menos cinco tipos entre los 15 requisitos. Incluir al menos cinco requisitos de calidad con una métrica cuantificada y un criterio de aceptación.}
+
+{\small
+\begin{longtable}{@{}L{0.9cm}L{4.0cm}L{1.85cm}L{2.6cm}L{2.1cm}L{3.35cm}@{}}
+\caption{Clasificación y verificación de los requisitos del sistema.}\label{tab:requisitos}\\
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} &
+\textbf{ISO/IEC 25010} & \textbf{Métrica} & \textbf{Criterio de aceptación} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Enunciado} & \textbf{Tipo} &
+\textbf{ISO/IEC 25010} & \textbf{Métrica} & \textbf{Criterio de aceptación} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+R-01 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-02 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-03 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-04 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-05 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-06 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-07 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-08 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-09 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-10 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-11 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-12 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-13 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-14 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+R-15 & \campo{Enunciado} & \campo{Tipo} & \campo{Clasificación} & \campo{Métrica} & \campo{Criterio} \\
+\end{longtable}
+}
+
+\section{Autoevaluación}
+
+\campo{Revisar los 15 requisitos contra las nueve características de 5.2.5 y los criterios de lenguaje de 5.2.7. Registrar el resultado de la revisión y documentar cada corrección en la Tabla \ref{tab:autoevaluacion}.}
+
+\begin{longtable}{@{}L{1.0cm}L{4.4cm}L{5.3cm}L{4.7cm}@{}}
+\caption{Cambios efectuados tras la revisión de requisitos.}\label{tab:autoevaluacion}\\
+\toprule
+\textbf{ID} & \textbf{Versión anterior} & \textbf{Versión corregida} & \textbf{Criterio que motivó el cambio} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Versión anterior} & \textbf{Versión corregida} & \textbf{Criterio que motivó el cambio} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+% Duplicar la fila por cada requisito corregido.
+\campo{ID} & \campo{Texto original} & \campo{Texto revisado} & \campo{Hallazgo de 5.2.5 o 5.2.7} \\
+\end{longtable}
+
+\section{Evidencia del sistema}
+
+\campo{Explicar qué requisito respalda cada captura. Guardar al menos tres capturas propias en \texttt{figuras/} y citar cada figura en el texto.}
+
+% Cambiar los nombres de archivo según las capturas propias.
+% Revisar que las imágenes públicas no muestren datos personales de terceros.
+% Completar las descripciones e IDs y desarrollar la relación en el texto.
+\newcommand{\captura}[3]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{#1}{%
+      \includegraphics[width=0.82\linewidth,height=5cm,keepaspectratio]{#1}%
+    }{%
+      \fbox{\parbox[c][1.1cm][c]{0.82\linewidth}{\centering\campo{Insertar captura propia}}}%
+    }%
+    \caption{#2}\label{#3}
+  \end{figure}%
+}
+
+\captura{figuras/captura-01.png}{\campo{Descripción e ID del requisito respaldado}}{fig:captura-01}
+\captura{figuras/captura-02.png}{\campo{Descripción e ID del requisito respaldado}}{fig:captura-02}
+\captura{figuras/captura-03.png}{\campo{Descripción e ID del requisito respaldado}}{fig:captura-03}
+\campo{Relacionar las figuras \ref{fig:captura-01}, \ref{fig:captura-02} y \ref{fig:captura-03} con los requisitos correspondientes.}
+
+\section{Reflexión}
+
+\campo{En media página, identificar el tipo de requisito más difícil de formular y explicar por qué, con una dificultad concreta del sistema elegido.}
+
+\section{Declaración sobre el uso de IA}
+
+\campo{Declarar el uso real de IA como apoyo. Incluir herramienta, versión, propósito y cómo se verificó el resultado. Si no se usó, declararlo expresamente.}
+
+% Crear referencias.bib, añadir las citas \cite{clave} donde se usan las
+% fuentes y ejecutar BibTeX con el estilo IEEEtran.
+\IfFileExists{referencias.bib}{%
+  \bibliographystyle{IEEEtran}
+  \bibliography{referencias}
+}{%
+  \section*{Referencias}
+  \campo{Incluir al menos tres fuentes verificables en estilo IEEE, entre ellas ISO/IEC/IEEE 29148:2018 y al menos dos publicadas en los últimos cinco años.}
+}
+
+\end{document}
